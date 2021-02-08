@@ -73,6 +73,8 @@ namespace TobbyBlog
             {
                 o.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger");
             });
+
+            
         }
     }
 }
