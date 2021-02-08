@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TobbyBlog.Data;
+using TobbyBlog.DataAccess.Repository.Implementation;
+using TobbyBlog.DataAccess.Repository.Interface;
 
 namespace TobbyBlog
 {
@@ -38,11 +40,13 @@ namespace TobbyBlog
                 swagger.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Tobby Blog API's",
+                    Title = "Tobby's Blog API",
                     Description = $"© Copyright {DateTime.Now.Year}. All rights reserved."
                 });
                
             });
+
+            services.AddScoped(typeof(IDatastore<>),typeof(DataStore<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
