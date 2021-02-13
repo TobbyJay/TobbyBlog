@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TobbyBlog.Controllers
+namespace TobbyBlog.Controllers.V1
 {
-    public class PostController : Controller
-    {       
+    public class HomeController : Controller
+    {
         public IActionResult Index()
         {
             return View();

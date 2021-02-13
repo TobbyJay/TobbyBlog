@@ -18,5 +18,7 @@ namespace TobbyBlog.Entities
         public string Content { get; set; }
         public string DatePosted { get; set; }     
         ICollection<Comment> Comments { get; set; }
+        public int Likes { get; set; }
+
     }
 }

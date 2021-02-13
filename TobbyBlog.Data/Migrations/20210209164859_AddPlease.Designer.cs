@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TobbyBlog.Data;
 
 namespace TobbyBlog.Data.Migrations
 {
     [DbContext(typeof(TobbyBlogDbContext))]
-    partial class TobbyBlogDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210209164859_AddPlease")]
+    partial class AddPlease
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -235,9 +237,6 @@ namespace TobbyBlog.Data.Migrations
 
                     b.HasKey("CommentId");
 
-                    b.HasIndex("PostId")
-                        .IsUnique();
-
                     b.ToTable("Comments");
                 });
 
@@ -310,20 +309,6 @@ namespace TobbyBlog.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("TobbyBlog.Entities.Comment", b =>
-                {
-                    b.HasOne("TobbyBlog.Entities.Post", null)
-                        .WithOne("Comment")
-                        .HasForeignKey("TobbyBlog.Entities.Comment", "PostId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("TobbyBlog.Entities.Post", b =>
-                {
-                    b.Navigation("Comment");
                 });
 #pragma warning restore 612, 618
         }
