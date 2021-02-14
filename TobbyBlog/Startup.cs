@@ -31,11 +31,14 @@ namespace TobbyBlog
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddRazorPages();
             services.AddDbContextPool<TobbyBlogDbContext>(
                    options => options.UseSqlServer(Configuration.GetConnectionString("DBConnection"))
             );
 
-            services.AddScoped(typeof(IDatastore<>),typeof(DataStore<>));
+            services.AddScoped(typeof(IDatastore<>), typeof(DataStore<>));
+
+            //integrate swagger gen
             services.AddSwaggerGen(swagger =>
             {
                 swagger.SwaggerDoc("v1", new OpenApiInfo
@@ -63,10 +66,10 @@ namespace TobbyBlog
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllers();
+            //});
 
             app.UseSwagger();
             app.UseSwaggerUI(o =>
@@ -74,7 +77,14 @@ namespace TobbyBlog
                 o.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger");
             });
 
-            
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
+            });
+
         }
     }
 }
