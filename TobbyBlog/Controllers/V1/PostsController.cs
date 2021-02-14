@@ -12,7 +12,6 @@ namespace TobbyBlog.Controllers.V1
     [ApiController]
     public class PostsController : Controller
     {
-        private readonly IPostService _postService;
         public PostsController()
         {
 

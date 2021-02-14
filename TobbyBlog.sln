@@ -13,10 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TobbyBlog.Services", "Tobby
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TobbyBlog.Entities", "TobbyBlog.Entities\TobbyBlog.Entities.csproj", "{0DA57268-68FB-4A2A-BA1A-DBA9C4793D19}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TobbyBlog.DTOs", "TobbyBlog.DTOs\TobbyBlog.DTOs.csproj", "{DDA0AB60-ED82-4E2A-A9F3-6BBAF298889E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TobbyBlog.Options", "TobbyBlog.Options\TobbyBlog.Options.csproj", "{F8AC0EF0-081E-4470-ACD2-1C0B8C467540}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,14 +39,6 @@ Global
 		{0DA57268-68FB-4A2A-BA1A-DBA9C4793D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DA57268-68FB-4A2A-BA1A-DBA9C4793D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DA57268-68FB-4A2A-BA1A-DBA9C4793D19}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DDA0AB60-ED82-4E2A-A9F3-6BBAF298889E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DDA0AB60-ED82-4E2A-A9F3-6BBAF298889E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DDA0AB60-ED82-4E2A-A9F3-6BBAF298889E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DDA0AB60-ED82-4E2A-A9F3-6BBAF298889E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8AC0EF0-081E-4470-ACD2-1C0B8C467540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8AC0EF0-081E-4470-ACD2-1C0B8C467540}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8AC0EF0-081E-4470-ACD2-1C0B8C467540}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8AC0EF0-081E-4470-ACD2-1C0B8C467540}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
